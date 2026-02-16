@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>24/7 قنوات (HD) | STREAMTP CLONE</title>
+  
+  <!-- Video.js CSS -->
+  <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+  <!-- Video.js -->
+  <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+  <!-- HLS plugin for Video.js -->
+  <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.min.js"></script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 50%, #16213e 100%);
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      direction: rtl;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 2px solid #00ccff;
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #00ccff;
+      text-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
+      letter-spacing: 2px;
+    }
+    
+    .note {
+      color: #ffcc00;
+      font-weight: bold;
+      margin: 15px 0;
+      font-size: 1.1em;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    
+    .players {
+      margin: 20px 0;
+      font-size: 1.1em;
+    }
+    
+    .players a {
+      color: #00ff9d;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    
+    .players a:hover {
+      color: #00ccff;
+      text-shadow: 0 0 10px rgba(0, 204, 255, 0.8);
+    }
+    
+    .eventos {
+      margin: 25px 0;
+      font-size: 1.4em;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .status {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+    
+    .activo { 
+      background: linear-gradient(135deg, #00cc44, #00ff66); 
+      color: #000; 
+      box-shadow: 0 0 15px rgba(0, 204, 68, 0.4);
+    }
+    
+    .inactivo { 
+      background: linear-gradient(135deg, #cc0000, #ff3333); 
+      color: #fff; 
+    }
+    
+    /* المشغل المدمج */
+    .player-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+    
+    .player-container {
+      width: 90%;
+      max-width: 900px;
+      background: #1a1a2e;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 50px rgba(0, 204, 255, 0.3);
+      border: 2px solid #00ccff;
+    }
+    
+    .player-header {
+      background: linear-gradient(135deg, #00ccff, #0088cc);
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .player-title {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #000;
+    }
+    
+    .close-btn {
+      background: rgba(0, 0, 0, 0.3);
+      border: none;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .close-btn:hover {
+      background: rgba(255, 0, 0, 0.8);
+      transform: rotate(90deg);
+    }
+    
+    .video-wrapper {
+      position: relative;
+      padding-top: 56.25%;
+      background: #000;
+    }
+    
+    .video-js {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    
+    /* تخصيص Video.js */
+    .vjs-big-play-button {
+      background: rgba(0, 204, 255, 0.8) !important;
+      border: none !important;
+      width: 80px !important;
+      height: 80px !important;
+      border-radius: 50% !important;
+      line-height: 80px !important;
+      font-size: 40px !important;
+      left: 50% !important;
+      top: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      transition: all 0.3s !important;
+    }
+    
+    .vjs-big-play-button:hover {
+      background: #00ffea !important;
+      box-shadow: 0 0 30px rgba(0, 255, 234, 0.6) !important;
+      transform: translate(-50%, -50%) scale(1.1) !important;
+    }
+    
+    .vjs-control-bar {
+      background: linear-gradient(to top, rgba(0,0,0,0.9), transparent) !important;
+    }
+    
+    .vjs-play-progress {
+      background: #00ccff !important;
+    }
+    
+    .vjs-volume-level {
+      background: #00ff9d !important;
+    }
+    
+    /* قائمة القنوات */
+    ul.channels {
+      list-style: none;
+      padding: 0;
+    }
+    
+    ul.channels li {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      margin: 15px 0;
+      padding: 20px;
+      border-radius: 15px;
+      border: 1px solid #333;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    ul.channels li:hover {
+      transform: translateY(-3px);
+      border-color: #00ccff;
+      box-shadow: 0 10px 30px rgba(0, 204, 255, 0.2);
+    }
+    
+    ul.channels li::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, #00ccff, #00ff9d);
+    }
+    
+    .channel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    ul.channels li strong {
+      color: #00ffea;
+      font-size: 1.4em;
+      text-shadow: 0 0 10px rgba(0, 255, 234, 0.3);
+    }
+    
+    .channel-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    
+    .link-btn {
+      background: linear-gradient(135deg, #333, #444);
+      color: #00ccff;
+      padding: 8px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: all 0.3s;
+      border: 1px solid #555;
+    }
+    
+    .link-btn:hover {
+      background: linear-gradient(135deg, #00ccff, #0088cc);
+      color: #000;
+      border-color: #00ccff;
+      box-shadow: 0 0 15px rgba(0, 204, 255, 0.4);
+    }
+    
+    .play-btn {
+      background: linear-gradient(135deg, #00cc44, #00ff66);
+      color: #000;
+      padding: 10px 25px;
+      border-radius: 25px;
+      border: none;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .play-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 204, 68, 0.5);
+    }
+    
+    .play-btn::before {
+      content: '▶';
+      font-size: 0.8em;
+    }
+    
+    .m3u-section {
+      margin-top: 50px;
+      padding: 30px;
+      background: linear-gradient(135deg, #111, #1a1a2e);
+      border: 2px solid #444;
+      border-radius: 15px;
+    }
+    
+    .m3u-section h2 {
+      color: #00ccff;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+    
+    pre {
+      background: #000;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.9em;
+      direction: ltr;
+      text-align: left;
+      border: 1px solid #333;
+      color: #00ff9d;
+    }
+    
+    hr {
+      border: 0;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #00ccff, transparent);
+      margin: 40px 0;
+    }
+    
+    /* الساعة */
+    .digital-clock {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 2px solid #00ccff;
+      border-radius: 15px;
+      padding: 15px 25px;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3), inset 0 0 20px rgba(0, 204, 255, 0.1);
+      font-family: 'Courier New', monospace;
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #00ffea;
+      text-shadow: 0 0 10px rgba(0, 255, 234, 0.5);
+      letter-spacing: 2px;
+      z-index: 100;
+    }
+    
+    .digital-clock .date {
+      font-size: 0.5em;
+      color: #ffcc00;
+      text-align: center;
+      margin-top: 5px;
+      text-shadow: none;
+    }
+    
+    @media (max-width: 768px) {
+      .digital-clock {
+        position: static;
+        margin: 10px auto;
+        display: table;
+        font-size: 1.4em;
+      }
+      
+      .player-container {
+        width: 95%;
+      }
+      
+      .channel-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="digital-clock" id="clock">
+      <div id="time">00:00:00</div>
+      <div class="date" id="date">---</div>
+    </div>
+    
+    <h1>24/7 قنوات (HD) | STREAMTP CLONE</h1>
+    <div class="note">NUEVO DOMINIO: YOURDOMAIN.COM</div>
+    <div class="players">
+      <a href="player-manual.html">global1.php (تشغيل يدوي)</a> |
+      <a href="player-auto.html">global2.php (تشغيل تلقائي)</a>
+    </div>
+  </header>
+
+  <!-- المشغل المدمج -->
+  <div class="player-modal" id="playerModal">
+    <div class="player-container">
+      <div class="player-header">
+        <span class="player-title" id="playerTitle">قناة</span>
+        <button class="close-btn" onclick="closePlayer()">×</button>
+      </div>
+      <div class="video-wrapper">
+        <video id="videoPlayer" class="video-js vjs-big-play-centered vjs-fluid" controls preload="auto" width="640" height="264">
+          <p class="vjs-no-js">يجب تفعيل JavaScript لمشاهدة الفيديو</p>
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="eventos">
+    <strong>Eventos</strong>
+    <span class="status activo">Activo</span>
+    <a href="agenda.html" style="color:#ff9d00;">فتح الأجندة</a>
+  </div>
+
+  <hr>
+
+  <h2 style="color: #00ccff; margin-bottom: 20px; font-size: 2em;">قنوات beIN SPORTS (HEVC)</h2>
+  
+  <ul class="channels">
+    <li>
+      <div class="channel-header">
+        <strong>beIN SP⚽RTS ʰᵉᵛᶜ 1</strong>
+        <span class="status activo">Activo</span>
+      </div>
+      <div class="channel-links">
+        <button class="play-btn" onclick="openPlayer('beIN SPORTS 1', 'http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269943.ts')">
+          تشغيل في المتصفح
+        </button>
+        <a href="http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269943.ts" target="_blank" class="link-btn">رابط 1 (eagle)</a>
+        <a href="http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101901.ts" target="_blank" class="link-btn">رابط 2</a>
+      </div>
+    </li>
+    
+    <li>
+      <div class="channel-header">
+        <strong>beIN SP⚽RTS ʰᵉᵛᶜ 2</strong>
+        <span class="status activo">Activo</span>
+      </div>
+      <div class="channel-links">
+        <button class="play-btn" onclick="openPlayer('beIN SPORTS 2', 'http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269944.ts')">
+          تشغيل في المتصفح
+        </button>
+        <a href="http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269944.ts" target="_blank" class="link-btn">رابط 1 (eagle)</a>
+        <a href="http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101899.ts" target="_blank" class="link-btn">رابط 2</a>
+      </div>
+    </li>
+    
+    <li>
+      <div class="channel-header">
+        <strong>beIN SP⚽RTS ʰᵉᵛᶜ 3</strong>
+        <span class="status activo">Activo</span>
+      </div>
+      <div class="channel-links">
+        <button class="play-btn" onclick="openPlayer('beIN SPORTS 3', 'http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269945.ts')">
+          تشغيل في المتصفح
+        </button>
+        <a href="http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269945.ts" target="_blank" class="link-btn">رابط 1</a>
+        <a href="http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101897.ts" target="_blank" class="link-btn">رابط 2</a>
+      </div>
+    </li>
+    
+    <li>
+      <div class="channel-header">
+        <strong>beIN SP⚽RTS ʰᵉᵛᶜ 4</strong>
+        <span class="status activo">Activo</span>
+      </div>
+      <div class="channel-links">
+        <button class="play-btn" onclick="openPlayer('beIN SPORTS 4', 'http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269946.ts')">
+          تشغيل في المتصفح
+        </button>
+        <a href="http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269946.ts" target="_blank" class="link-btn">رابط 1</a>
+        <a href="http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101895.ts" target="_blank" class="link-btn">رابط 2</a>
+      </div>
+    </li>
+    
+    <li>
+      <div class="channel-header">
+        <strong>beIN SP⚽RTS ʰᵉᵛᶜ 5</strong>
+        <span class="status activo">Activo</span>
+      </div>
+      <div class="channel-links">
+        <button class="play-btn" onclick="openPlayer('beIN SPORTS 5', 'http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269947.ts')">
+          تشغيل في المتصفح
+        </button>
+        <a href="http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269947.ts" target="_blank" class="link-btn">رابط 1</a>
+        <a href="http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101894.ts" target="_blank" class="link-btn">رابط 2</a>
+      </div>
+    </li>
+    
+    <li>
+      <div class="channel-header">
+        <strong>beIN SP⚽RTS ʰᵉᵛᶜ 6</strong>
+        <span class="status activo">Activo</span>
+      </div>
+      <div class="channel-links">
+        <button class="play-btn" onclick="openPlayer('beIN SPORTS 6', 'http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269948.ts')">
+          تشغيل في المتصفح
+        </button>
+        <a href="http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269948.ts" target="_blank" class="link-btn">رابط 1</a>
+        <a href="http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101893.ts" target="_blank" class="link-btn">رابط 2</a>
+      </div>
+    </li>
+    
+    <li>
+      <div class="channel-header">
+        <strong>beIN SP⚽RTS ʰᵉᵛᶜ 7</strong>
+        <span class="status activo">Activo</span>
+      </div>
+      <div class="channel-links">
+        <button class="play-btn" onclick="openPlayer('beIN SPORTS 7', 'http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269949.ts')">
+          تشغيل في المتصفح
+        </button>
+        <a href="http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269949.ts" target="_blank" class="link-btn">رابط 1</a>
+        <a href="http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101892.ts" target="_blank" class="link-btn">رابط 2</a>
+      </div>
+    </li>
+    
+    <li>
+      <div class="channel-header">
+        <strong>beIN SP⚽RTS ʰᵉᵛᶜ 8</strong>
+        <span class="status activo">Activo</span>
+      </div>
+      <div class="channel-links">
+        <button class="play-btn" onclick="openPlayer('beIN SPORTS 8', 'http://eagle2024.xyz/live/staar_870012/MUK6qsGk/10361.ts')">
+          تشغيل في المتصفح
+        </button>
+        <a href="http://eagle2024.xyz/live/staar_870012/MUK6qsGk/10361.ts" target="_blank" class="link-btn">رابط</a>
+      </div>
+    </li>
+    
+    <li>
+      <div class="channel-header">
+        <strong>beIN SP⚽RTS ʰᵉᵛᶜ 9</strong>
+        <span class="status activo">Activo</span>
+      </div>
+      <div class="channel-links">
+        <button class="play-btn" onclick="openPlayer('beIN SPORTS 9', 'http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101890.ts')">
+          تشغيل في المتصفح
+        </button>
+        <a href="http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101890.ts" target="_blank" class="link-btn">رابط</a>
+      </div>
+    </li>
+  </ul>
+
+  <hr>
+
+  <div class="m3u-section">
+    <h2>ملف M3U جاهز (استبدال الروابط الأصلية)</h2>
+    <pre><code>#EXTM3U
+#EXTINF:-1 tvg-id="beIN SPORTS 1.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 1" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 1
+http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269943.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 1.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 1" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 1
+http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101901.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 2.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 2" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 2
+http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269944.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 2.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 2" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 2
+http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101899.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 3.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 3" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 3
+http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269945.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 3.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 3" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 3
+http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101897.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 4.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 4" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 4
+http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269946.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 4.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 4" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 4
+http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101895.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 5.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 5" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 5
+http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269947.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 5.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 5" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 5
+http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101894.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 6.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 6" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 6
+http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269948.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 6.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 6" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 6
+http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101893.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 7.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 7" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 7
+http://eagle2024.xyz/live/staar_870012/MUK6qsGk/1269949.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 7.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 7" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 7
+http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101892.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 8.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 8" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 8
+http://eagle2024.xyz/live/staar_870012/MUK6qsGk/10361.ts
+#EXTINF:-1 tvg-id="beIN SPORTS 9.qa" tvg-name="beIN SP⚽RTS ʰᵉᵛᶜ 9" tvg-logo="https://i.ibb.co/Z6H4Lw1M/bein-sports-1.png" group-title="BEIN SPORTS",beIN SP⚽RTS ʰᵉᵛᶜ 9
+http://185.229.240.112:1991/live/fc039f41c7244/UVaMbYImtG/101890.ts</code></pre>
+  </div>
+
+</div>
+
+<script>
+  // الساعة
+  function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+    
+    const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+    document.getElementById('date').textContent = now.toLocaleDateString('ar-SA', options);
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  // المشغل
+  let player = null;
+  
+  function openPlayer(channelName, streamUrl) {
+    const modal = document.getElementById('playerModal');
+    const title = document.getElementById('playerTitle');
+    
+    title.textContent = channelName;
+    modal.style.display = 'flex';
+    
+    // إذا كان هناك مشغل سابق، قم بتدميره
+    if (player) {
+      player.dispose();
+    }
+    
+    // إنشاء مشغل جديد
+    player = videojs('videoPlayer', {
+      html5: {
+        vhs: {
+          overrideNative: true,
+          limitRenditionByPlayerDimensions: true,
+          useBandwidthFromLocalStorage: true
+        }
+      },
+      autoplay: true,
+      controls: true,
+      preload: 'auto',
+      fluid: true,
+      aspectRatio: '16:9',
+      playbackRates: [0.5, 1, 1.5, 2],
+      controlBar: {
+        children: [
+          'playToggle',
+          'volumePanel',
+          'currentTimeDisplay',
+          'timeDivider',
+          'durationDisplay',
+          'progressControl',
+          'liveDisplay',
+          'seekToLive',
+          'remainingTimeDisplay',
+          'customControlSpacer',
+          'playbackRateMenuButton',
+          'chaptersButton',
+          'descriptionsButton',
+          'subsCapsButton',
+          'audioTrackButton',
+          'fullscreenToggle'
+        ]
+      }
+    });
+    
+    // تعيين المصدر
+    player.src({
+      src: streamUrl,
+      type: 'application/x-mpegURL' // HLS/TS
+    });
+    
+    // معالجة الأخطاء
+    player.on('error', function() {
+      console.error('Error loading stream');
+      // محاولة تشغيل الرابط البديل إذا فشل الأول
+      if (streamUrl.includes('eagle2024')) {
+        const backupUrl = streamUrl.replace('eagle2024.xyz', '185.229.240.112:1991').replace('/staar_870012/MUK6qsGk/', '/fc039f41c7244/UVaMbYImtG/');
+        player.src({
+          src: backupUrl,
+          type: 'application/x-mpegURL'
+        });
+      }
+    });
+    
+    player.play().catch(function(error) {
+      console.log('Autoplay prevented:', error);
+    });
+  }
+  
+  function closePlayer() {
+    const modal = document.getElementById('playerModal');
+    modal.style.display = 'none';
+    
+    if (player) {
+      player.pause();
+      player.dispose();
+      player = null;
+    }
+  }
+  
+  // إغلاق المشغل عند الضغط على Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closePlayer();
+    }
+  });
+  
+  // إغلاق المشغل عند الضغط خارج المحتوى
+  document.getElementById('playerModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closePlayer();
+    }
+  });
+</script>
+
+</body>
+</html>
