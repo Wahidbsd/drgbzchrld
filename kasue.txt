@@ -1,1 +1,3 @@
 http://ksauae.xyz:8080/get.php?username=98653226884&password=17441864105955&type=m3u_plus&output=ts
+supaapp.xyz 462738737337 352672622626
+http://bossgate.xyz/get.php?username=462738737337&password=352672622626&type=m3u_plus&output=ts
