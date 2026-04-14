@@ -3,168 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة البث المباشر - القنوات الرياضية والعامة</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>مشغل قنوات ألوان - ALWAN Player</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f0f0f; color: white; margin: 0; padding: 20px; }
+        .main-container { max-width: 1000px; margin: auto; }
+        .video-wrapper { position: relative; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid #333; }
+        video { width: 100%; display: block; aspect-ratio: 16/9; }
+        .channels-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-top: 25px; }
+        .channel-card { background: #1e1e1e; padding: 15px; border-radius: 8px; cursor: pointer; text-align: center; transition: 0.3s; border: 1px solid #222; }
+        .channel-card:hover { background: #ed1c24; transform: translateY(-3px); }
+        .channel-card.active { background: #ed1c24; border-color: #fff; }
+        h1 { font-size: 24px; color: #ed1c24; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+    </style>
+</head>
+<body>
 
-        body {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #fff;
-            min-height: 100vh;
-        }
+<div class="main-container">
+    <h1>🔴 بث مباشر - مجموعة قنوات ألوان</h1>
+    
+    <div class="video-wrapper">
+        <video id="video" controls></video>
+    </div>
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    <div class="channels-grid" id="playlist">
+        </div>
+</div>
 
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 2px solid #4a4a8a;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
+<script>
+    // بيانات القنوات المستخرجة من ملفك
+    const channels = [
+        { name: "ALWAN Cinema", url: "https://live.alwan.stream/hls/cinema.m3u8" },
+        { name: "ALWAN Drama", url: "https://live.alwan.stream/hls/drama.m3u8" },
+        { name: "ALWAN Kids", url: "https://live.alwan.stream/hls/kids.m3u8" },
+        { name: "ALWAN Al-Youm", url: "https://live.alwan.stream/hls/alyoum.m3u8" },
+        { name: "ALWAN Khalijia", url: "https://live.alwan.stream/hls/khalijia.m3u8" }
+    ];
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+    const video = document.getElementById('video');
+    const playlistDiv = document.getElementById('playlist');
+    let hls = new Hls();
 
-        .search-box {
-            background: rgba(255,255,255,0.1);
-            border-radius: 30px;
-            padding: 5px 20px;
-            display: flex;
-            align-items: center;
-            backdrop-filter: blur(5px);
-        }
+    function loadChannel(url, element) {
+        // تحديث شكل الأزرار
+        document.querySelectorAll('.channel-card').forEach(el => el.classList.remove('active'));
+        element.classList.add('active');
 
-        .search-box input {
-            background: none;
-            border: none;
-            color: white;
-            padding: 10px;
-            width: 300px;
-            font-size: 16px;
+        if (Hls.isSupported()) {
+            hls.destroy(); // تنظيف المشغل السابق
+            hls = new Hls();
+            hls.loadSource(url);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+        } 
+        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = url;
+            video.addEventListener('loadedmetadata', () => video.play());
         }
+    }
 
-        .search-box input::placeholder {
-            color: #aaa;
-        }
-
-        .search-box button {
-            background: none;
-            border: none;
-            color: #4ecdc4;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        .filters {
-            display: flex;
-            gap: 10px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: rgba(255,255,255,0.1);
-            border: none;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: all 0.3s;
-            backdrop-filter: blur(5px);
-        }
-
-        .filter-btn.active {
-            background: #4ecdc4;
-            color: #16213e;
-            font-weight: bold;
-        }
-
-        .filter-btn:hover {
-            background: rgba(78, 205, 196, 0.5);
-        }
-
-        /* Player Section */
-        .player-section {
-            background: rgba(0,0,0,0.5);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(10px);
-            border: 1px solid #4a4a8a;
-        }
-
-        .player-wrapper {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .player-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            background: #000;
-        }
-
-        #videoPlayer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-        }
-
-        /* Custom Controls */
-        .custom-controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .player-wrapper:hover .custom-controls {
-            opacity: 1;
-        }
-
-        .control-btn {
-            background: rgba(78, 205, 196, 0.2);
-            border: 2px solid #4ecdc4;
-            color: #4ecdc4;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 18px;
+    // إنشاء قائمة القنوات تلقائياً
+    channels.forEach((ch, index) => {
+        const div = document.createElement('div');
+        div.className = 'channel-card';
+        div.innerText = ch.name;
+        div.onclick = () => loadChannel(ch.url, div);
+        playlistDiv.appendChild(div);
+        
+        // تشغيل أول قناة عند فتح الموقع
+        if(index === 0) loadChannel(ch.url, div);
+    });
+</script>
+</body>
+</html>
             display: flex;
             align-items: center;
             justify-content: center;
