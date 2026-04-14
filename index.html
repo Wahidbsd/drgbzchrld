@@ -3,104 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشغل قنوات ألوان - ALWAN Player</title>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <title>منصة البث الرياضي - beIN Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f0f0f; color: white; margin: 0; padding: 20px; }
-        .main-container { max-width: 1000px; margin: auto; }
-        .video-wrapper { position: relative; background: #000; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid #333; }
-        video { width: 100%; display: block; aspect-ratio: 16/9; }
-        .channels-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-top: 25px; }
-        .channel-card { background: #1e1e1e; padding: 15px; border-radius: 8px; cursor: pointer; text-align: center; transition: 0.3s; border: 1px solid #222; }
-        .channel-card:hover { background: #ed1c24; transform: translateY(-3px); }
-        .channel-card.active { background: #ed1c24; border-color: #fff; }
-        h1 { font-size: 24px; color: #ed1c24; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        :root {
+            --primary-color: #ed1c24;
+            --accent-color: #4ecdc4;
+            --bg-dark: #0f0f0f;
+            --card-bg: #1e1e1e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-dark);
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container { max-width: 1200px; margin: auto; }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary-color); }
+
+        /* Player Styling */
+        .player-section {
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            border: 1px solid #333;
+        }
+
+        video { width: 100%; aspect-ratio: 16/9; display: block; }
+
+        .current-info {
+            padding: 15px;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .current-info img { width: 60px; height: 60px; border-radius: 8px; object-fit: contain; background: #000; }
+
+        /* Grid Styling */
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .channel-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            border: 1px solid #222;
+        }
+
+        .channel-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            background: #252525;
+        }
+
+        .channel-card.active {
+            background: var(--primary-color);
+            border-color: #fff;
+        }
+
+        .channel-card img { width: 100%; height: 100px; object-fit: contain; margin-bottom: 10px; }
+        
+        .channel-card h4 { margin: 5px 0; font-size: 16px; }
+
+        .status-dot {
+            height: 8px;
+            width: 8px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 5px;
+            box-shadow: 0 0 5px #2ecc71;
+        }
     </style>
 </head>
 <body>
 
-<div class="main-container">
-    <h1>🔴 بث مباشر - مجموعة قنوات ألوان</h1>
-    
-    <div class="video-wrapper">
-        <video id="video" controls></video>
+<div class="container">
+    <header>
+        <div class="logo"><i class="fas fa-play-circle"></i> بث مباشر للمباريات</div>
+    </header>
+
+    <div id="playerView" class="player-section" style="display: none;">
+        <video id="mainVideo" controls autoplay playsinline></video>
+        <div class="current-info">
+            <img id="activeImg" src="" alt="">
+            <div>
+                <h3 id="activeTitle" style="margin:0;">اسم القناة</h3>
+                <small style="color: #aaa;">بث مباشر بجودة عالية</small>
+            </div>
+        </div>
     </div>
 
-    <div class="channels-grid" id="playlist">
-        </div>
+    <h2 style="border-right: 4px solid var(--primary-color); padding-right: 15px;">القنوات الرياضية</h2>
+    <div class="channels-grid" id="channelsList"></div>
 </div>
 
 <script>
-    // بيانات القنوات المستخرجة من ملفك
-    const channels = [
-        { name: "ALWAN Cinema", url: "https://live.alwan.stream/hls/cinema.m3u8" },
-        { name: "ALWAN Drama", url: "https://live.alwan.stream/hls/drama.m3u8" },
-        { name: "ALWAN Kids", url: "https://live.alwan.stream/hls/kids.m3u8" },
-        { name: "ALWAN Al-Youm", url: "https://live.alwan.stream/hls/alyoum.m3u8" },
-        { name: "ALWAN Khalijia", url: "https://live.alwan.stream/hls/khalijia.m3u8" }
+    const sportsChannels = [
+        { title: "beIN Sport 1", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch1/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/b1.png" },
+        { title: "beIN Sport 2", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch2/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/b2.png" },
+        { title: "beIN Sport 3", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch3/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/b3.png" },
+        { title: "beIN Sport 4", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch4/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/b4.png" },
+        { title: "beIN Sport 5", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch5/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/b5.png" },
+        { title: "beIN Sport 6", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch6/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/b6.png" },
+        { title: "beIN Sport 7", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch7/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/b7.png" },
+        { title: "beIN Sport 8", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch8/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/b8.png" },
+        { title: "Starzplay 1", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch10/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/starz1.png" },
+        { title: "Starzplay 2", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch9/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/starz2.png" },
+        { title: "AD Sports 1", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch11/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/ad1.png" },
+        { title: "AD Sports 2", url: "https://stream.supertv.gg:3001/supertv/sport/stv1/ch12/adaptive.m3u8", img: "https://iraqapps.github.io/earthlinksport/img/ad2.png" }
     ];
 
-    const video = document.getElementById('video');
-    const playlistDiv = document.getElementById('playlist');
-    let hls = new Hls();
+    const channelsList = document.getElementById('channelsList');
+    const playerView = document.getElementById('playerView');
+    const mainVideo = document.getElementById('mainVideo');
+    const activeTitle = document.getElementById('activeTitle');
+    const activeImg = document.getElementById('activeImg');
 
-    function loadChannel(url, element) {
-        // تحديث شكل الأزرار
-        document.querySelectorAll('.channel-card').forEach(el => el.classList.remove('active'));
-        element.classList.add('active');
+    function playChannel(url, title, img, el) {
+        // تحديث التصميم النشط
+        document.querySelectorAll('.channel-card').forEach(card => card.classList.remove('active'));
+        el.classList.add('active');
 
-        if (Hls.isSupported()) {
-            hls.destroy(); // تنظيف المشغل السابق
-            hls = new Hls();
-            hls.loadSource(url);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
-        } 
-        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = url;
-            video.addEventListener('loadedmetadata', () => video.play());
-        }
+        // تحديث المشغل
+        playerView.style.display = 'block';
+        activeTitle.innerText = title;
+        activeImg.src = img;
+        mainVideo.src = url;
+        mainVideo.play();
+        
+        // تمرير للمشغل في الموبايل
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // إنشاء قائمة القنوات تلقائياً
-    channels.forEach((ch, index) => {
-        const div = document.createElement('div');
-        div.className = 'channel-card';
-        div.innerText = ch.name;
-        div.onclick = () => loadChannel(ch.url, div);
-        playlistDiv.appendChild(div);
-        
-        // تشغيل أول قناة عند فتح الموقع
-        if(index === 0) loadChannel(ch.url, div);
+    // بناء الواجهة
+    sportsChannels.forEach(ch => {
+        const card = document.createElement('div');
+        card.className = 'channel-card';
+        card.innerHTML = `
+            <img src="${ch.img}" alt="${ch.title}">
+            <h4><span class="status-dot"></span> ${ch.title}</h4>
+        `;
+        card.onclick = () => playChannel(ch.url, ch.title, ch.img, card);
+        channelsList.appendChild(card);
     });
 </script>
+
 </body>
 </html>
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-            backdrop-filter: blur(5px);
-        }
-
-        .control-btn:hover {
-            background: #4ecdc4;
-            color: #16213e;
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
-        }
-
-        .control-btn.fullscreen {
-            background: rgba(255, 107, 107, 0.2);
-            border-color: #ff6b6b;
-            color: #ff6b6b;
-        }
-
-        .control-btn.fullscreen:hover {
-            background: #ff6b6b;
-            color: white;
-        }
-
         .current-channel {
             margin-top: 15px;
             display: flex;
