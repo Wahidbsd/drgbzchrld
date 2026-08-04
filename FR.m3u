@@ -1,0 +1,407 @@
+#EXTM3U
+#EXTINF:-1 group-title="FR| FRANCE 4K",##### FRANCE 4K #####
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=813294&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| TF1 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526153&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| FRANCE 2 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526152&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| FRANCE 3 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526151&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| FRANCE 4 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526150&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| FRANCE 5 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526149&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| M6 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526148&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| ARTE 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526147&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| W9 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526146&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| C8 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526145&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| TF1 SERIES 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526143&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| 6TER 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526144&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| TFX 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526142&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE 4K",FR| SYFY 4K
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=526141&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| MULTISPORTS 1 HD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972363&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| MULTISPORTS 2 HD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972362&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| MULTISPORTS 3 HD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972361&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| MULTISPORTS 4 HD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972360&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| MULTISPORTS 5 HD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972359&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| RMC TALK SPORT FHD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972357&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| RMC TALK SPORT HD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972356&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| RMC SPORT ACCESS FHD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972353&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| RMC SPORT ACCESS HD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972352&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| RMC SPORT 1 FHD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972351&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| RMC SPORT 1 HD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972350&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| RMC SPORT LIVE 3 FHD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972349&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE SPORT VIP ᴿᴬᵂ",FR| RMC SPORT LIVE 4 FHD ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1972348&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",##### GENERAL HD #####
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=814565&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| SECRET STORY HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2113721&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| TF1+ STAR ACADEMY HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1672769&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| TF1 +1 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1757130&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| TF1 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507471&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| FRANCE 2 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507470&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| FRANCE 3 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507469&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| FRANCE 4 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507458&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| FRANCE 5 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507467&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| M6 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507466&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| ARTE HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507465&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| W9 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507463&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| NRJ 12 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507460&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| TFX HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507461&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| 6 TER HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507452&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| TF1 SERIES HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507454&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| T18 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507464&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| TMC HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507462&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| TMC +1 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1757132&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| CHERIE 25 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507448&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| TECH&ECO
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1612940&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| MONACO TV HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=999388&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| MONACO INFO HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1887532&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| NOVO 19 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2022367&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",##### INFOS HD #####
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=814887&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| LA CHAINE METEO HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507284&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| FRANCE INFO HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507442&extension=ts
+#EXTINF:-1 group-title="FR| FRANCE HD",FR| FRANCE 24 HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1069902&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",##### DOCUMENTAIRE  #####
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=814582&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| CANAL+ DOCS HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=719108&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| CANAL+ DOCS LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=719110&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| PLANETE + HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507338&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| PLANETE + LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507527&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| PLANETE A&E HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507337&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| PLANETE A&E LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507526&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| PLANETE CI HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507336&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| PLANETE CI LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507525&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| NATIONAL GEO HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507334&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| NATIONAL GEO LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507523&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| NAT GEO WILD HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507333&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| NAT GEO WILD LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507522&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| DISCOVERY CHANNEL HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507321&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| DISCOVERY CHANNEL LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507510&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| DISCOVERY ID HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507319&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| DISCOVERY ID LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507508&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| TLC HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507320&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| TLC LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507509&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| TREK HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507325&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| TREK LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507514&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| HISTOIRE HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507331&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| HISTOIRE LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507520&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| TOUTE L'HISTOIRE HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507330&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| TOUTE L'HISTOIRE LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507519&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| SEASONS HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507324&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| SEASONS LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507513&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| CRIME DISTRICT LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1071008&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| USHUAIA HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507332&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| USHUAIA LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507521&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| ANIMAUX HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507326&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| ANIMAUX LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507515&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| CHASSE & PECHE HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507323&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| CHASSE & PECHE LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507512&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| RMC DECOUVERTE HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507449&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| RMC DECOUVERTE LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507605&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| RMC STORY LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507606&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| SCIENCE ET VIE HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507328&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| SCIENCE ET VIE LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507517&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| MUSEUM HD
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507329&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| VOYAGE LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507511&extension=ts
+#EXTINF:-1 group-title="FR| DOCUMENTAIRE HD",FR| NAUTICAL LQ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=507529&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",###### PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ ######
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1891181&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| 13EME RUE ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921294&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| AB1 ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921293&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| ACTION MAX ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921292&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| AUTOMOTO, LA CHAÎNE ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921291&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| BOOMERANG ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921290&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| CANAL J ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921289&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| CARTOON NETWORK ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921288&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| CARTOONITO ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921287&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| CHASSE ET PECHE ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921286&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| CINE+ CLASSIC ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921285&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| CINE+ EMOTION ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921284&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| CINE+ FAMILY ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921283&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| CINE+ FESTIVAL ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921282&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| CINE+ FRISSON ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921281&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| CNN ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921280&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| CRIME DISTRICT ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921279&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| DISCOVERY CHANNEL ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921278&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| DISCOVERY INVESTIGATION ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921277&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| DREAMWORKS ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921276&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| E! ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921275&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| ES1 CHANNEL ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921274&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| EUROSPORT 1 ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921273&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| EUROSPORT 2 ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921272&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| FRANCE 2 ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921271&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| FRANCE 3 ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921270&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| FRANCE 4 ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921269&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| FRANCE 5 ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921268&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| FRANCEINFO ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921267&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| MANGAS ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921266&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| MEZZO ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921265&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| MEZZO LIVE ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921264&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| NFL NETWORK ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921263&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| OCS ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921262&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| OLPLAY ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921261&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| RED BULL TV ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921260&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| SCIENCE ET VIE TV ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921259&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| SYFY ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921258&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| TCM CINÉMA ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921257&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| TIJI ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921256&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| TLC ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921255&extension=ts
+#EXTINF:-1 group-title="FR| PRIME ᴿᴬᵂ ⁶⁰ᶠᵖˢ",PRIME| TOUTE L'HISTOIRE ᴿᴬᵂ
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1921254&extension=ts
+#EXTINF:-1 group-title="FR| DAZN PPV BK",FR| DAZN EVENTS 2 HD ----- (ONLY ON LIVE)
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2020606&extension=ts
+#EXTINF:-1 group-title="FR| DAZN PPV BK",FR| DAZN EVENTS 3 HD ----- (ONLY ON LIVE)
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2020605&extension=ts
+#EXTINF:-1 group-title="FR| DAZN PPV BK",FR| DAZN EVENTS 4 HD ----- (ONLY ON LIVE)
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2020604&extension=ts
+#EXTINF:-1 group-title="FR| DAZN PPV BK",FR| DAZN EVENTS 5 HD ----- (ONLY ON LIVE)
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2020603&extension=ts
+#EXTINF:-1 group-title="FR| DAZN PPV BK",FR| DAZN EVENTS 6 HD ----- (ONLY ON LIVE)
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2020602&extension=ts
+#EXTINF:-1 group-title="FR| DAZN PPV BK",FR| DAZN EVENTS 8 HD ----- (ONLY ON LIVE)
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2020601&extension=ts
+#EXTINF:-1 group-title="FR| DAZN PPV BK",FR| DAZN EVENTS 9 HD ----- (ONLY ON LIVE)
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2020600&extension=ts
+#EXTINF:-1 group-title="FR| DAZN PPV BK",FR| DAZN EVENTS 10 HD ----- (ONLY ON LIVE)
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2020599&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",####### MAX PPV #######
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=1894352&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Cyclisme: Tour de Pologne: 2e étape @ Aug 4 13:04 PM :MAX FR  01
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026733&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Cyclisme: Tour de France Femmes avec Zwift: 4e étape @ Aug 4 15:30 PM :MAX FR  02
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026732&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Duncan Chan vs Thiago Agustín Tirante @ Aug 4 17:00 PM :MAX FR  03
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026731&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Sebastián Báez vs Mattia Bellucci @ Aug 4 17:00 PM :MAX FR  04
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026730&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Adam Walton vs Jenson Brooksby @ Aug 4 17:00 PM :MAX FR  05
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026729&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Martin Damm Jr vs Stefanos Tsitsipas @ Aug 4 17:00 PM :MAX FR  06
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026728&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Hubert Hurkacz vs Marcos Giron @ Aug 4 17:00 PM :MAX FR  07
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026727&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Masters 1000 Montréal: La journée en direct @ Aug 4 17:00 PM :MAX FR  08
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026726&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Pablo Carreño Busta vs Valentin Royer @ Aug 4 19:00 PM :MAX FR  09
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026725&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Jacob Fearnley vs Adrian Mannarino @ Aug 4 19:00 PM :MAX FR  10
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026724&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Cyclisme: Tour de Pologne: 2e étape @ Aug 4 13:04 PM :MAX FR  01
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026723&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Alexei Popyrin vs Román Andrés Burruchaga @ Aug 4 19:00 PM :MAX FR  12
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026722&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Zachary Svajda vs Denis Shapovalov @ Aug 4 19:00 PM :MAX FR  13
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026721&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Juncheng Shang vs Andrey Rublev @ Aug 4 21:00 PM :MAX FR  14
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026720&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Térence Atmane vs Jack Draper @ Aug 4 21:00 PM :MAX FR  15
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026719&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Juan Manuel Cerúndolo vs Hamad Medjedovic @ Aug 4 21:00 PM :MAX FR  16
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026718&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Lorenzo Sonego vs Tallon Griekspoor @ Aug 4 21:00 PM :MAX FR  17
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026717&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Giovanni Mpetshi Perricard vs Botic van de Zandschulp @ Aug 4 21:00 PM :MAX FR  18
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026716&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Jaume Munar vs Alexander Blockx @ Aug 4 23:00 PM :MAX FR  19
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026715&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Jirí Lehecka vs Vít Kopriva @ Aug 4 23:00 PM :MAX FR  20
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026714&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Shintaro Mochizuki vs Fábián Marozsán @ Aug 4 23:00 PM :MAX FR  21
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026713&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: James Duckworth vs Alex De Minaur @ Aug 5 00:00 AM :MAX FR  22
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026712&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Masters 1000 Montréal @ Aug 5 01:00 AM :MAX FR  23
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026711&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Brandon Nakashima vs Daniel Altmaier @ Aug 5 01:00 AM :MAX FR  24
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026710&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Flavio Cobolli vs Yannick Hanfmann @ Aug 5 02:00 AM :MAX FR  25
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026709&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Poker: WSOP – Las Vegas: Table finale – 2e journée @ Aug 5 02:00 AM :MAX FR  26
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026708&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",Tennis: Luciano Darderi vs Gabriel Diallo @ Aug 5 03:00 AM :MAX FR  27
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026707&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  28
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026706&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  29
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026705&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  30
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026704&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  31
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026703&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  32
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026702&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  33
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026701&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  34
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026700&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  35
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026699&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  36
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026698&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  37
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026697&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  38
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026696&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  39
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026695&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  40
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026694&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  41
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026693&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  42
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026692&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  43
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026691&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  44
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026690&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  45
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026689&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  46
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026688&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  47
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026687&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  48
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026686&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  49
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026685&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  50
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026684&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  51
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026683&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  52
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026682&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  53
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026681&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  54
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026680&extension=ts
+#EXTINF:-1 group-title="FR| MAX PPV",:MAX FR  55
+http://panel.onair8k.xyz:80/play/live.php?mac=00:1A:79:B3:80:74&stream=2026679&extension=ts
